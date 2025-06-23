@@ -44,6 +44,10 @@ class Player(GameSprite) :
     
 player_l = Player('raketka.png', 0, 250, 5, 60, 110)
 player_r = Player('raketka.png', 640, 250, 5, 60, 110)
+ball = GameSprite('ball.png', 300, 200 ,5 , 100, 100)
+
+speed_x = 3
+speed_y = 3
 
 finish = False
 
@@ -64,6 +68,10 @@ while game :
         player_r.update_r()
         player_l.reset()
         player_r.reset()
+        ball.reset()
+        ball.rect.x += speed_x
+        ball.rect.y += speed_y
+        
         
     
     
